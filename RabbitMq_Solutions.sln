@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FanoutConsumer", "FanoutConsumer\FanoutConsumer.csproj", "{0DAE02C4-2F79-464D-A966-4CF06818D8ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeaderConsumer", "HeaderConsumer\HeaderConsumer.csproj", "{8B4589FE-737D-4306-B010-0D42689D93BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{0DAE02C4-2F79-464D-A966-4CF06818D8ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DAE02C4-2F79-464D-A966-4CF06818D8ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DAE02C4-2F79-464D-A966-4CF06818D8ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B4589FE-737D-4306-B010-0D42689D93BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B4589FE-737D-4306-B010-0D42689D93BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B4589FE-737D-4306-B010-0D42689D93BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B4589FE-737D-4306-B010-0D42689D93BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
