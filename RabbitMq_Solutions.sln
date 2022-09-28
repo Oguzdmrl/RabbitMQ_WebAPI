@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeaderConsumer", "HeaderCon
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectConsumer", "DirectConsumer\DirectConsumer.csproj", "{8B14711A-E7A6-4DA3-B81C-A272599A113E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopicConsumer", "TopicConsumer\TopicConsumer.csproj", "{1B87FDA7-7471-4F61-9668-337C03C29512}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{8B14711A-E7A6-4DA3-B81C-A272599A113E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B14711A-E7A6-4DA3-B81C-A272599A113E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B14711A-E7A6-4DA3-B81C-A272599A113E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B87FDA7-7471-4F61-9668-337C03C29512}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B87FDA7-7471-4F61-9668-337C03C29512}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B87FDA7-7471-4F61-9668-337C03C29512}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B87FDA7-7471-4F61-9668-337C03C29512}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
