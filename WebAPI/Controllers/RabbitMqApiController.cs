@@ -15,5 +15,11 @@ namespace WebAPI.Controllers
             _publisher.PublishFanout(message);
             return Ok("FanoutExchange Mesaj gönderildi");
         }
+        [HttpPost]
+        public IActionResult PublishHeader([FromQuery] string args, string byteMessage)
+        {
+            _publisher.PublishHeader(args, byteMessage); // dotnet run 1
+            return Ok("HeaderExchange Mesaj gönderildi");
+        }
     }
 }
