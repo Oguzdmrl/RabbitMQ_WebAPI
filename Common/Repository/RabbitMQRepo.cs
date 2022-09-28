@@ -49,5 +49,20 @@ namespace Common.Repository
                     channel.BasicPublish(exchange: "directexchange", routingKey: "user", basicProperties: properties, body: byteMsg);
             }
         }
+        public void PublishTopic()
+        {
+            var connection = Helper.Connection();
+            using (var channel = connection.CreateModel())
+            {
+                channel.ExchangeDeclare("topicexchange", type: "topic");
+                for (int i = 1; i <= 100; i++)
+                {
+                    byte[] bytemessage = Encoding.UTF8.GetBytes($"{i}. görev verildi.");
+                    IBasicProperties properties = channel.CreateBasicProperties();
+                    properties.Persistent = true;
+                    channel.BasicPublish(exchange: "topicexchange", routingKey: $"Asker.Subay.{(i % 2 == 0 ? "Yuzbasi" : (i % 11 == 0 ? "Binbasi" : "Tegmen"))}", basicProperties: properties, body: bytemessage);
+                }
+            }
+        }
     }
 }
