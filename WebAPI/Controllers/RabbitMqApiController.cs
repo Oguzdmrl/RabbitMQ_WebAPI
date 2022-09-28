@@ -27,5 +27,11 @@ namespace WebAPI.Controllers
             _publisher.PublishDirect(yetki, byteMessage); // dotnet run admin
             return Ok("DirectExchange Mesaj gönderildi");
         }
+        [HttpPost]
+        public IActionResult PublishTopic()
+        {
+            _publisher.PublishTopic(); // dotnet run 1,2,3...
+            return Ok("TopicExchange Mesaj gönderildi");
+        }
     }
 }
