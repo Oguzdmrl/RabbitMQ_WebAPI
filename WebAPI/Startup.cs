@@ -1,3 +1,4 @@
+using Common.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,6 +29,9 @@ namespace WebAPI
         {
 
             services.AddControllers();
+            services.AddMvc();
+
+            services.AddScoped<RabbitMQRepo>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebAPI", Version = "v1" });
