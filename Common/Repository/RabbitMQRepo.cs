@@ -34,5 +34,20 @@ namespace Common.Repository
                 channel.BasicPublish(exchange: "headerexchange", routingKey: string.Empty, basicProperties: properties, body: msg);
             }
         }
+        public void PublishDirect(string yetki, string message)
+        {
+            var connection = Helper.Connection();
+            using (var channel = connection.CreateModel())
+            {
+                channel.ExchangeDeclare("directexchange", type: "direct");
+                var byteMsg = Encoding.UTF8.GetBytes(message);
+                IBasicProperties properties = channel.CreateBasicProperties();
+                properties.Persistent = true;
+                if (yetki == "admin")
+                    channel.BasicPublish(exchange: "directexchange", routingKey: "admin", basicProperties: properties, body: byteMsg);
+                else
+                    channel.BasicPublish(exchange: "directexchange", routingKey: "user", basicProperties: properties, body: byteMsg);
+            }
+        }
     }
 }
