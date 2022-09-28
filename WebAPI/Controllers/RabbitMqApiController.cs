@@ -21,5 +21,11 @@ namespace WebAPI.Controllers
             _publisher.PublishHeader(args, byteMessage); // dotnet run 1
             return Ok("HeaderExchange Mesaj gönderildi");
         }
+        [HttpPost]
+        public IActionResult PublishDirect([FromQuery] string yetki, string byteMessage)
+        {
+            _publisher.PublishDirect(yetki, byteMessage); // dotnet run admin
+            return Ok("DirectExchange Mesaj gönderildi");
+        }
     }
 }
